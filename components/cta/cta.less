@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
 
-    height: 100vh;
+    min-height: 100vh;
 
     .backgroundColor {
 
@@ -16,14 +16,37 @@
 
         background: rgba(66, 67, 107, 0.8);
         width: 100%;
-        height: 100%;
+        min-height: 100vh;
+
+        @media @tablet {
+            padding-top: 50px;
+            flex-direction: column-reverse;
+        }
 
         div {
             width: 40%;
+
+            @media @tablet {
+                width: 90%;
+            }
         }
 
-        .content p {
-            font-size: 4rem;
+        .content {
+            @media @tablet {
+                text-align: center;
+            }
+            
+            p {
+                font-size: 4rem;
+
+                @media @tablet {
+                    margin-bottom: 3rem;
+                }
+
+                @media @mobile {
+                    font-size: 2.8rem;
+                }
+            }
         }
 
         .action {
@@ -38,21 +61,24 @@
                 padding-left: 2rem;
             }
 
-            button {
+            .button {
                 border-radius: 10px;
                 border: none;
                 background: @lvl-light-main;
                 color: @lvl-dark;
 
                 font-size: 3rem;
+                text-decoration: none;
                 
-                padding: 2rem;
-                margin-top: 2rem;
+                padding: 2rem 4rem;
+                margin-top: 1.6rem;
+                margin-bottom: 4px;
 
                 &:hover {
                     background: @lvl-dark;
                     color: @lvl-light-main;
                     border: 2px solid @lvl-light-main;
+                    margin-bottom: 0;
                 }
             }
         }
