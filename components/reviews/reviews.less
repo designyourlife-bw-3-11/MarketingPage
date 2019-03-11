@@ -1,0 +1,42 @@
+.reviewsSection{
+    color: @lvl-light;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+
+    .reviewsContainer {
+        .center();
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        .review {
+            width: 50%;
+            padding: 1rem;
+
+            background: @lvl-light;
+            color: @lvl-dark;
+
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 75px;
+            }
+
+            &:nth-child(1){
+                border-top-left-radius: 30px;
+            }
+            &:nth-child(2){
+                border-top-right-radius: 30px;
+            }
+
+            &:nth-last-child(2){
+                border-bottom-left-radius: 30px;
+            }
+            &:nth-last-child(1){
+                border-bottom-right-radius: 30px;
+            }
+        }
+    }
+}
