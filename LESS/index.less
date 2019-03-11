@@ -3,12 +3,26 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif; // move this to mixins
+
+  font-size: 62.5%;
+  line-height: 1.5;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
   margin: inherit;
   padding: inherit;
+  font-size: 1.6rem;
 }
 
 @import './mixins.less';
+@import './global.less';
+@import '../components/header/header.less';
+@import '../components/footer/footer.less';
+@import '../components/cta/cta.less';
+@import '../components/spotlight/spotlight.less';
+@import '../components/reviews/reviews.less';
+
+
+
+
