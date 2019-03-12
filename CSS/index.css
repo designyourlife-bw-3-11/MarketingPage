@@ -37,19 +37,66 @@ h5,
 h6 {
   font-size: 2rem;
 }
-header.about {
-  position: static;
+main.about {
+  padding-top: 60px;
+  min-height: 80.6vh;
 }
 .about {
   background: #3D4247;
   color: #FFFFFF;
-  padding: 5%;
+  padding: 1% 5% 2%;
+}
+.about section {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .about section {
+    width: 100%;
+    text-align: center;
+  }
+}
+.about section p {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.about .cards {
+  align-items: flex-start;
+}
+.about .cards .card.bio .content .bioP {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+@media (max-width: 600px) {
+  .index .cards.reviews {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .index .cards.reviews .card.review {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .index .cards.reviews .card.review {
+    flex-direction: row;
+  }
+}
+@media (max-width: 500px) {
+  .index .cards.reviews .card.review {
+    flex-direction: column;
+  }
 }
 .reviewsSection {
   width: 80%;
   margin: 0 auto;
   padding: 4rem 2rem 2rem 2rem;
   text-align: center;
+}
+@media (max-width: 1000px) {
+  .reviewsSection {
+    width: 94%;
+  }
 }
 .reviewsSection p {
   padding: 4rem 0 8rem;
@@ -60,10 +107,10 @@ header.about {
   }
 }
 .reviewsSection .cards .card {
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
-header {
+.header {
   background: #3D4247;
   color: #FFFFFF;
   display: flex;
@@ -73,19 +120,12 @@ header {
   position: fixed;
   width: 100%;
 }
-@media (max-width: 500px) {
-  header {
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: absolute;
-  }
-}
-header a {
+.header a {
   text-decoration: none;
   color: inherit;
   padding: 10px;
 }
-header a:hover {
+.header a:hover {
   text-decoration: underline;
   color: #81FFFE;
 }
@@ -230,26 +270,48 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .cards {
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
 .cards .card {
   margin: 2rem;
   width: 80%;
   padding: 1rem;
   display: flex;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .cards .card {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
+  .cards .card h3 {
+    font-size: 1.8rem;
+  }
+}
+.cards .card a {
+  margin: 1rem;
 }
 .cards .card img {
   width: 150px;
   height: 150px;
-  border-radius: 75px;
-  padding: 1rem;
+  border-radius: 5px;
 }
 .cards .card .content {
   text-align: left;
   margin-left: 2rem;
+}
+@media (max-width: 800px) {
+  .cards .card .content {
+    text-align: center;
+  }
 }
 .cards .card .content p {
   border-top: 1px solid rgba(0, 0, 0, 0.5);

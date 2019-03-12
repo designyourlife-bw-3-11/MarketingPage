@@ -3,6 +3,13 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: 600px) {
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
     .card {
         margin: 2rem;
 
@@ -11,21 +18,37 @@
 
         display: flex;
 
-        @media @mobile {
+        @media @tablet {
+    
+            flex-direction: column;
+            align-items: center;
             width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+
+            h3 {
+                font-size: 1.8rem;
+            }
         }
 
+
+        a {
+            margin: 1rem;
+        }
 
         img {
             width: 150px;
             height: 150px;
-            border-radius: 75px;
-            padding: 1rem;
+            border-radius: 5px;
         }
 
         .content {
             text-align: left;
             margin-left: 2rem;
+
+            @media @tablet {
+                text-align: center;
+            }
 
             p {
                 border-top: 1px solid rgba(0,0,0,0.5);
