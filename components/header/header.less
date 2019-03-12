@@ -1,4 +1,4 @@
-header {
+.header {
     background: @lvl-dark;
     color: @lvl-light;
     display: flex;
@@ -10,15 +10,10 @@ header {
     position: fixed;
     width: 100%;
 
-    @media @mobile {
-        flex-direction: column;
-        justify-content: space-evenly;
-        position: absolute;
-    }
-
     a {
         text-decoration: none;
         color: inherit;
+        padding: 10px;
 
         &:hover {
             text-decoration: underline;
