@@ -1,0 +1,38 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        margin: 2rem;
+
+        width: 80%;
+        padding: 1rem;
+
+        display: flex;
+
+        @media @mobile {
+            width: 100%;
+        }
+
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            padding: 1rem;
+        }
+
+        .content {
+            text-align: left;
+            margin-left: 2rem;
+
+            p {
+                border-top: 1px solid rgba(0,0,0,0.5);
+                padding: 1rem 0 0 0 ;
+                margin-top: 1rem;
+            }
+        }
+
+    }
+}

@@ -1,5 +1,20 @@
-html { 
-    background: @lvl-dark;
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Mukta', sans-serif; // move this to mixins
+    font-size: 62.5%;
+    line-height: 1.5;
+
+    background: @lvl-light;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
 }
 
 h1 {
@@ -12,4 +27,36 @@ h2 {
 
 h3, h4, h5, h6 {
     font-size: 2rem;
+}
+
+header.about {
+    position: static;
+}
+
+.about {
+    background: @lvl-dark;
+    color: @lvl-light;
+    padding: 5%;
+}
+
+.reviewsSection{
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem 2rem;
+    text-align: center;
+
+    p {
+        padding: 4rem 0 8rem;
+    }
+
+    @media @tablet {
+        width: 100%;
+    }
+
+    .cards {
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+        }
+    }
 }
