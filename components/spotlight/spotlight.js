@@ -14,12 +14,13 @@ class Spotlight {
         
 
         let animateRemoveReset = () => {
-            if (window.scrollY> this.trigger){
+            if (window.scrollY > this.trigger){
                 this.slideIn();
-                window.removeEventListener("scroll", func);
+                window.removeEventListener("scroll", animateRemoveReset);
 
                 window.addEventListener("resize", () => {
                     // resets sizes eliminates a bug where animations end views that happened in mobile view persisted through resize
+                    console.log("reset")
                     this.element.style = null;
                     this.content.style = null;
                     this.children.forEach(child => child.style = null);
