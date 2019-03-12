@@ -13,20 +13,26 @@ class Spotlight {
 
         
 
-        let func = () => {
+        let animateRemoveReset = () => {
             if (window.scrollY> this.trigger){
                 this.slideIn();
                 window.removeEventListener("scroll", func);
+
+                window.addEventListener("resize", () => {
+                    // resets sizes eliminates a bug where animations end views that happened in mobile view persisted through resize
+                    this.element.style = null;
+                    this.content.style = null;
+                    this.children.forEach(child => child.style = null);
+                });
             }
         }
 
-        window.addEventListener("scroll", func);
+        window.addEventListener("scroll", animateRemoveReset);
     }
 
     slideIn(){
         console.log("in Slide");
         let from = {width: 0, opacity: 0, height: this.contentHeight};
-        //console.log(this.element.getBoundingClientRect());
         this.content.style.display = null;
         let anim = new TimelineLite();
         anim.from(this.content, 1.3, from)
