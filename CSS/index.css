@@ -123,9 +123,11 @@ main.about {
 .header a {
   text-decoration: none;
   color: inherit;
+}
+.header .navA {
   padding: 10px;
 }
-.header a:hover {
+.header .navA:hover {
   border-bottom: 1.5px solid #81FFFE;
   color: #81FFFE;
   padding-bottom: 3px;
