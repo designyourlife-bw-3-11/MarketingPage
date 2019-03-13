@@ -47,12 +47,11 @@ main.about {
   padding: 1% 5% 2%;
 }
 .about section {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 800px) {
   .about section {
-    width: 100%;
     text-align: center;
   }
 }
@@ -127,8 +126,10 @@ main.about {
   padding: 10px;
 }
 .header a:hover {
-  text-decoration: underline;
+  border-bottom: 1.5px solid #81FFFE;
   color: #81FFFE;
+  padding-bottom: 3px;
+  margin-bottom: 7px;
 }
 footer {
   background: #79A1CC;
@@ -208,13 +209,23 @@ footer {
   text-decoration: none;
   padding: 2rem 4rem;
   margin-top: 1.6rem;
-  margin-bottom: 4px;
+  margin-bottom: 2rem;
+}
+@media (max-width: 800px) {
+  .cta .backgroundColor .action .button {
+    margin-bottom: 3rem;
+  }
 }
 .cta .backgroundColor .action .button:hover {
   background: #3D4247;
   color: #81FFFE;
   border: 2px solid #81FFFE;
-  margin-bottom: 0;
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 800px) {
+  .cta .backgroundColor .action .button:hover {
+    margin-bottom: 2.6rem;
+  }
 }
 .spotlight {
   min-height: 100vh;
@@ -247,6 +258,11 @@ footer {
   max-width: 700px;
   padding: 6rem 4rem;
   line-height: 2;
+}
+@media (max-width: 800px) {
+  .spotlight .content {
+    max-width: 500px;
+  }
 }
 @media (max-width: 500px) {
   .spotlight .content {

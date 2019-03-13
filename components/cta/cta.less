@@ -72,13 +72,21 @@
                 
                 padding: 2rem 4rem;
                 margin-top: 1.6rem;
-                margin-bottom: 4px;
+                margin-bottom: 2rem;
+
+                @media @tablet {
+                    margin-bottom: 3rem;
+                }
 
                 &:hover {
                     background: @lvl-dark;
                     color: @lvl-light-main;
                     border: 2px solid @lvl-light-main;
-                    margin-bottom: 0;
+                    margin-bottom: 1.6rem;
+
+                    @media @tablet {
+                        margin-bottom: 2.6rem;
+                    }
                 }
             }
         }
