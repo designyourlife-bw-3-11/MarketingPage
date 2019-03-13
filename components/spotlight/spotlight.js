@@ -7,17 +7,20 @@ class Spotlight {
         this.contentHeight = window.getComputedStyle(this.content).height;
         this.content.style.display = "none";
 
-        let ios = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-        if (ios) {
-            /* 
-                IOS does not like background attachment fixed.
-                
-                a better fix would be to add a fullscreen div with a fixed position and set
-                overflow to hidden on the spotlight element.. thassa TODO:
-            */
-            this.element.style.backgroundAttachment = "scroll";
-            this.element.style.backgroundSize = "auto 100%";
+        let iosFix = () => {
+            if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+                /* 
+                    IOS does not like background attachment fixed.
+                    
+                    a better fix would be to add a fullscreen div with a fixed position and set
+                    overflow to hidden on the spotlight element.. thassa TODO:
+                */
+                this.element.style.backgroundAttachment = "scroll";
+                this.element.style.backgroundSize = "auto 100%";
+            }
         }
+
+        iosFix();
 
         this.trigger = this.element.getBoundingClientRect();
         this.trigger = this.trigger.y - 200;
@@ -36,6 +39,7 @@ class Spotlight {
                     this.element.style = null;
                     this.content.style = null;
                     this.children.forEach(child => child.style = null);
+                    iosFix();
                 });
             }
         }
