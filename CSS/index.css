@@ -277,10 +277,6 @@ footer {
     flex-direction: column;
   }
 }
-.spotlight .content h2,
-.spotlight .content p {
-  padding: 0;
-}
 .spotlight .content h2 {
   margin-bottom: 2rem;
 }
